@@ -14,6 +14,14 @@
     "@cloudflare/workers-types": "^4.20240821.1",
     "typescript": "^5.5.2",
     "vitest": "1.5.0",
-    "wrangler": "^3.60.3"
+    "wrangler": "3.74.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "wrangler@3.74.0>unenv": "npm:unenv-nightly@2.0.0-1725459230.941309d"
+    }
+  },
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.3.4"
   }
 }
