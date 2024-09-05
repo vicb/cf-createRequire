@@ -1,12 +1,11 @@
 #:schema node_modules/wrangler/config-schema.json
 name = "w-createrequire"
 main = "src/index.ts"
-base_dir = "/src"
 compatibility_date = "2024-08-21"
 compatibility_flags = ["nodejs_compat_v2"]
 
 rules = [
   {type = "CommonJS", globs = [ "**/*.cjs" ]},
-  {type = "ESModule", globs = [ "**/*.esm" ]}
+  {type = "ESModule", globs = [ "**/*.js" ]}
 ]
 

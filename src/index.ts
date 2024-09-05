@@ -1,14 +1,14 @@
-import { createRequire } from 'node:module';
+import { createRequire } from 'module';
 
 export default {
-	async fetch(request, env, ctx): Promise<Response> {
+	async fetch(request, env, ctx) {
 		const esm = (await import('./hello.js')).hello();
 		console.log(esm);
 
-		const require = createRequire('file://');
-		const cjs = require('hello.cjs').hello();
+		const require = createRequire('/');
+		const cjs = require('./hello.cjs').hello();
 		console.log(cjs);
 
 		return new Response('done');
 	},
-} satisfies ExportedHandler<Env>;
+};
